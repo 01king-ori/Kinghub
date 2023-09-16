@@ -15,7 +15,7 @@ $menuItems = array(
     "Donation Form" => "donation.php", 
     "About" => "about.php", 
     "Portfolio" => "portfolio.php", 
-    "Chats" => "chats.php",
+    
     "List of donations" => "list.php",
     "Profile"  => "profile.php"
 );

@@ -6,6 +6,14 @@ if (!isset($_SESSION["id"])) {
     header("Location: login.php");
     exit();
 }
+$menuItems = array(
+    "Donation Form" => "donation.php", 
+    "About" => "about.php", 
+    "Portfolio" => "portfolio.php", 
+    
+    "List of donations" => "list.php",
+    "Profile"  => "profile.php"
+);
 
 $id = $_SESSION["id"];
 $query = "SELECT * FROM organization WHERE id = ?";
@@ -21,9 +29,54 @@ $user = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <style>
+        ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Background color of the navbar */
+    overflow: hidden;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #ddd; /* Background color of navbar items on hover */
+    color: black;
+}
+
+/* Style for the logout button */
+#logout {
+    background-color: aqua;
+    float: right;
+}
+    </style> 
     <title>Profile</title>
 </head>
 <body>
+<header>
+    <ul class="navbar">
+        <?php
+        
+        // Loop through the menu items and display them as links
+        foreach ($menuItems as $menuItem => $url) {
+            echo "<li><a href='$url'>$menuItem</a></li>";
+        }
+        ?>
+    </ul>
+    </header>
     <h1>Profile Page</h1>
     <p>Welcome, <?php echo $user["name"]; ?></p>
 
@@ -49,7 +102,8 @@ $user = mysqli_fetch_assoc($result);
     <!-- Delete Profile -->
     <h2>Delete Profile</h2>
     <form action="delete_profile.php" method="post">
-        <input type="submit" name="delete" value="Delete Profile">
+        
+        <input type="submit" name="delete" value="Delete Profile"><img src="../charity_sw/imgs/delete.png" alt="Delete Icon">
     </form>
 
     <br>

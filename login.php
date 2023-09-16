@@ -1,4 +1,4 @@
- <?php
+<?php
  
  require 'config.php';
  if (!empty($_SESSION["id"])) {

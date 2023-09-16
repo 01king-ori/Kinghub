@@ -13,9 +13,9 @@ else {
 }
 $menuItems = array(
     "List of Organizations" => "organizations.php", 
-    "Newsletters" => "newsletters.html", 
-    "How We Work" => "how_we_work.html", 
-    "Contact Us" => "contact_us.html",
+    "Newsletters" => "newsletters.php", 
+    "How We Work" => "how_we_work.php", 
+    "Contact Us" => "contact_us.php",
     "Profile"  => "profile.php",
     "Donate" =>  "donationslist.php"
 );

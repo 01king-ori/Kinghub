@@ -22,7 +22,9 @@ ul.navbar li a:hover {
     background-color: #ddd; /* Background color of navbar items on hover */
     color: black;
 }
-#logout{
+
+/* Style for the logout button */
+#logout {
     background-color: aqua;
-    float:right;
+    float: right;
 }

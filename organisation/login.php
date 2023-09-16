@@ -30,20 +30,33 @@ if(isset($_POST["submit"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Login</title>
     
 </head>
 <body>
-    <h2>Login</h2>
+<div class="wrapper">
+    <h1>Login</h1>
     <form class="" action=""  method="post" autocomplete="off">
-        <label for="usernameemail">Username or email</label>
-        <input type="text" name="usernameemail" id="usernameemail" required value="">
+      <div class="input-box">
+       
+        <input type="text" name="usernameemail" id="usernameemail" placeholder="Enter name or email" required value="">
+       <i class='bx bxs-user'></i>
+</div>
+<div class="input-box">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" required value="">
-        <button type="submit" name="submit">Login</button>
+        <input type="password" name="password" id="password" placeholder="Enter password" required value="">
+        <i class='bx bxs-lock-alt'></i>
+</div>
+        <button type="submit" class="button" name="submit">Login</button>
+        <div class="register-link">
+<a href="registration.php">Don't have an account </a>
+</div>
+
 
 </form>
+</div>
 <br>
-<a href="registration.php">Don't have an account </a>
 </body>
 </html>

@@ -10,6 +10,16 @@ if (!isset($_SESSION["id"])) {
 if (empty($date)) {
     $date = date("Y-m-d"); // Current date in YYYY-MM-DD format
 }
+$menuItems = array(
+    "List of Organizations" => "organizations.php", 
+    "Newsletters" => "newsletters.php", 
+    "How We Work" => "how_we_work.php", 
+    "Contact Us" => "contact_us.php",
+    "Profile"  => "profile.php",
+    "Donate" =>  "donationslist.php"
+);
+
+
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -43,12 +53,55 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+        /* Add the CSS styles for the navbar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Background color of the navbar */
+            overflow: hidden;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #ddd; /* Background color of navbar items on hover */
+            color: black;
+        }
+
+        /* Style for the logout button */
+        #logout {
+            background-color: aqua;
+            float: right;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
 </head>
 <body>
+
     <h2>Donate</h2>
+    <ul class="navbar">
+        <?php
+        
+        // Loop through the menu items and display them as links
+        foreach ($menuItems as $menuItem => $url) {
+            echo "<li><a href='$url'>$menuItem</a></li>";
+        }
+        ?>
+    </ul>
     <form action="" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required><br>
