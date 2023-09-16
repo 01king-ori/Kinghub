@@ -16,7 +16,8 @@ $menuItems = array(
     "Newsletters" => "newsletters.html", 
     "How We Work" => "how_we_work.html", 
     "Contact Us" => "contact_us.html",
-    "Profile"  => "profile.php"
+    "Profile"  => "profile.php",
+    "Donate" =>  "donationslist.php"
 );
 ?>
 <!DOCTYPE html>

@@ -53,22 +53,25 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="css/reg.css">
 </head>
 <body>
    <h2>Registration</h2>
+   <div class="wrapper">
    <form class="" action="" method="post" autocomplete="off" >
     <label for="name">Name :</label>
-    <input type="text" name="name" id="name" required value=""><br>
+    <input type="text" name="name" id="name"  placeholder=" enter full name" required value=""><br>
     <label for="username">Username :</label>
-    <input type="text" name="username" id="username" required value=""><br>
+    <input type="text" name="username" id="username" placeholder=" enter username" required value=""><br>
      <label for="email">Email :</label>
-    <input type="email" name="email" id="email" required value=""><br>
+    <input type="email" name="email" id="email"placeholder=" enter email" required value=""><br>
     <label for="password">Password :</label>
-    <input type="password" name="password" id="password" required value=""><br>
+    <input type="password" name="password" id="password"placeholder=" enter password" required value=""><br>
     <label for="confirmpassword">Confirm Password :</label>
-    <input type="password" name="confirmpassword" id="confirmpassword" required value=""><br>
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder=" confirm pasword" required value=""><br>
    <button type="submit" name="submit">Register</button>
 </form>
+</div>
 <br>
 <a href="login.php">Login</a>
 </body>
