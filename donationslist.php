@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </form>
 
     <br>
-    <a href="donationslist.php">View Donations List</a><br>
+    <a href="show_donationslist.php">View Donations List</a><br>
     <a href="logout.php">Logout</a>
 </body>
 </html>
